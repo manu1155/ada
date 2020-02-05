@@ -95,3 +95,42 @@ int middle_school(int a,int b)
  return ans;
    
 }
+
+void main()
+{
+ int a,b,n,x;
+ printf("Enter the two numbers \n");
+ scanf("%d%d",&a,&b);
+ printf("Enter 1: for Euclid's method\nEnter 2: for Repitative subtraction method\nEnter 3: for Consicutive integer checking method\nEnter    4: for Middle school method\nEnter 5: for Euclid's reccursive method\nEnter 6: for Repitetive subtraction reccursive method\nEnter 7: for Consicutive integer reccursive method\n");
+ scanf("%d",&n);
+ switch(n)
+ {
+  case 1 :x=euclid(a,b);
+          printf("GCD = %d",x);
+          break;
+  case 2 :x=repitative_subraction(a,b);
+          printf("GCD = %d",x);
+          break;
+  case 3 :if(a<=b)
+           x=consicutive_integer(a,b,a);
+          else
+           x=consicutive_integer(a,b,b);
+          printf("GCD = %d",x);
+          break;
+  case 4 :x=middle_school(a,b);
+          printf("GCD = %d",x);
+          break;
+  case 5 :x=euclid_rec(a,b);
+          printf("GCD = %d",x);
+          break;
+  case 6 :x=repitative_subraction_rec(a,b);
+          printf("GCD = %d",x);
+          break;
+  case 7 :if(a<=b)
+           x=consicutive_integer_rec(a,b,a);
+          else
+           x=consicutive_integer_rec(a,b,b);
+          printf("GCD = %d",x);
+          break;
+ }
+}
